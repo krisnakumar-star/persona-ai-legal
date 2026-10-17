@@ -1,30 +1,56 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Request deletion of your Persona AI account and associated data.">
-  <title>Delete Your Account — Persona AI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit a request to delete your Persona AI account and associated data.">
+  <title>Delete Account - Persona AI</title>
+
   <style>
     :root {
-      color-scheme: light;
       --navy: #111b35;
       --muted: #526078;
       --accent: #5147d9;
       --line: #e3e8f0;
+      --background: #f5f7fb;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font: 16px/1.7 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color: #202938;
-      background: #f5f7fb;
+      background: var(--background);
     }
-    header { background: var(--navy); color: white; padding: 42px 20px; }
-    header div, main, footer { max-width: 850px; margin: 0 auto; }
-    header h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; }
-    header p { margin: 0; color: #dce4f7; }
+
+    header {
+      background: var(--navy);
+      color: white;
+      padding: 42px 20px;
+    }
+
+    header div,
+    main,
+    footer {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.2;
+    }
+
+    header p {
+      margin: 0;
+      color: #dce4f7;
+    }
+
     main {
       background: white;
       margin: 28px auto;
@@ -32,90 +58,266 @@
       border: 1px solid var(--line);
       border-radius: 18px;
     }
-    h2 { color: var(--navy); margin-top: 28px; }
-    a { color: var(--accent); overflow-wrap: anywhere; }
-    footer { color: var(--muted); padding: 0 20px 30px; font-size: .9rem; }
-    .button {
-      display: inline-block;
+
+    h2 {
+      color: var(--navy);
+      margin-top: 28px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin: 18px 0 6px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #cbd3e1;
+      border-radius: 9px;
+      font: inherit;
+      color: #202938;
+      background: white;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .optional {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .checkbox-row input {
+      width: auto;
+      margin-top: 7px;
+    }
+
+    .checkbox-row label {
+      margin: 0;
+      font-weight: 400;
+    }
+
+    button {
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 14px 18px;
       background: var(--accent);
       color: white;
-      text-decoration: none;
-      font-weight: 650;
-      padding: 12px 18px;
-      border-radius: 10px;
-      margin: 10px 0;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 10px;
     }
-    .note {
-      background: #f5f7fb;
+
+    button:hover {
+      opacity: 0.92;
+    }
+
+    .notice {
+      background: var(--background);
       border: 1px solid var(--line);
-      padding: 16px;
       border-radius: 12px;
+      padding: 16px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .status {
+      margin-top: 16px;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      color: var(--muted);
+      padding: 0 20px 30px;
+      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
-<header>
-  <div>
-    <h1>Delete your Persona AI account</h1>
-    <p>Request deletion of your account and associated data.</p>
-  </div>
-</header>
+  <header>
+    <div>
+      <h1>Delete your Persona AI account</h1>
+      <p>Submit a request to delete your account and associated data.</p>
+    </div>
+  </header>
 
-<main>
-  <p>
-    You can request deletion of your Persona AI account and associated
-    personal data by emailing our support team. We will verify your
-    request and process it manually.
-  </p>
+  <main>
+    <h2>Account deletion request</h2>
 
-  <h2>How to request deletion</h2>
-  <ol>
-    <li>Click the button below to open an email to our support team.</li>
-    <li>Send the request from the email address associated with your Persona AI account.</li>
-    <li>Use the subject line "Persona AI account deletion request".</li>
-    <li>Do not include your password in the email.</li>
-    <li>We may contact you to verify account ownership before deleting your data.</li>
-  </ol>
+    <p>
+      Complete this form to request deletion of your Persona AI account.
+      Your request will be sent to our support email for manual review.
+    </p>
 
-  <p>
-    <a class="button"
-       href="mailto:KRISHNAVISU12@GMAIL.COM?subject=Persona%20AI%20account%20deletion%20request&body=I%20request%20deletion%20of%20my%20Persona%20AI%20account%20and%20associated%20data.%0A%0AMy%20account%20email%20is%3A%20">
-      Email an account deletion request
-    </a>
-  </p>
+    <form id="deletionForm">
+      <label for="accountEmail">
+        Account email address *
+      </label>
+      <input
+        type="email"
+        id="accountEmail"
+        name="accountEmail"
+        placeholder="Email linked to your Persona AI account"
+        maxlength="254"
+        autocomplete="email"
+        required
+      >
 
-  <p class="note">
-    Clicking the button opens your email application. Your request is
-    submitted only after you send the email. We will review the request
-    and delete the account and associated data we control after verifying
-    ownership, subject to applicable legal and security retention obligations.
-  </p>
+      <label for="username">
+        Username <span class="optional">(Optional)</span>
+      </label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Your Persona AI username, if applicable"
+        maxlength="100"
+        autocomplete="username"
+      >
 
-  <h2>What data is deleted?</h2>
-  <p>
-    Once the request is verified and processed, we will delete your account
-    and associated personal information that we control, including relevant
-    financial records, subject to applicable legal, security, or fraud-prevention
-    retention obligations.
-  </p>
+      <label for="reason">
+        Reason for deletion <span class="optional">(Optional)</span>
+      </label>
+      <select id="reason" name="reason">
+        <option value="">Prefer not to say</option>
+        <option value="I no longer use the app">I no longer use the app</option>
+        <option value="Privacy concerns">Privacy concerns</option>
+        <option value="Creating a new account">Creating a new account</option>
+        <option value="Other">Other</option>
+      </select>
 
-  <h2>Processing time</h2>
-  <p>
-    We will acknowledge your request and process verified requests as soon
-    as reasonably possible. We will contact you if additional verification
-    is needed.
-  </p>
+      <label for="details">
+        Additional details <span class="optional">(Optional)</span>
+      </label>
+      <textarea
+        id="details"
+        name="details"
+        maxlength="1000"
+        placeholder="Anything else you want us to know"
+      ></textarea>
 
-  <h2>Contact</h2>
-  <p>
-    Persona AI<br>
-    Email:
-    <a href="mailto:KRISHNAVISU12@GMAIL.COM">KRISHNAVISU12@GMAIL.COM</a>
-  </p>
+      <div class="checkbox-row">
+        <input
+          type="checkbox"
+          id="confirmation"
+          name="confirmation"
+          required
+        >
+        <label for="confirmation">
+          I confirm that I am requesting deletion of the Persona AI account
+          associated with the email address provided above.
+        </label>
+      </div>
 
-  <p><a href="privacy-policy.html">Read the Privacy Policy</a></p>
-</main>
+      <button type="submit">Prepare deletion request email</button>
 
-<footer>© 2026 Persona AI</footer>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="notice">
+      <strong>What happens next?</strong>
+      <ol>
+        <li>Your email application opens with the request details filled in.</li>
+        <li>Review the email and press Send to submit your request.</li>
+        <li>We may contact you to verify account ownership.</li>
+        <li>After verification, we will manually process your request and delete
+          the account and associated data we control, subject to applicable
+          legal and security retention obligations.</li>
+      </ol>
+      <strong>Privacy:</strong> Never enter or email your account password.
+      This webpage does not collect or transmit your form data directly.
+    </div>
+
+    <h2>Contact</h2>
+    <p>
+      Persona AI<br>
+      Email:
+      <a href="mailto:KRISHNAVISU12@GMAIL.COM">
+        KRISHNAVISU12@GMAIL.COM
+      </a>
+    </p>
+
+    <p>
+      <a href="privacy-policy.html">Read the Privacy Policy</a>
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2026 Persona AI
+  </footer>
+
+  <script>
+    const form = document.getElementById("deletionForm");
+    const statusMessage = document.getElementById("status");
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      const email = document.getElementById("accountEmail").value.trim();
+      const username = document.getElementById("username").value.trim();
+      const reason = document.getElementById("reason").value;
+      const details = document.getElementById("details").value.trim();
+
+      const subject = "Persona AI account deletion request";
+
+      const body = [
+        "Hello Persona AI Support,",
+        "",
+        "I request deletion of my Persona AI account and associated data.",
+        "",
+        "Account email: " + email,
+        "Username: " + (username || "Not provided"),
+        "Reason: " + (reason || "Not provided"),
+        "Additional details: " + (details || "Not provided"),
+        "",
+        "Please verify my account ownership if required.",
+        "",
+        "Thank you."
+      ].join("\n");
+
+      const mailto =
+        "mailto:KRISHNAVISU12@GMAIL.COM" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+      statusMessage.textContent =
+        "Your email application should open. Review the request and press Send to submit it. If it does not open, email KRISHNAVISU12@GMAIL.COM directly.";
+
+      window.location.href = mailto;
+    });
+  </script>
 </body>
 </html>
